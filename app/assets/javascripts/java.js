@@ -20,3 +20,5 @@ function getJavaEnabled() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getJavaEnabled, false);

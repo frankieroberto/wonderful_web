@@ -42,3 +42,5 @@ function getPlugins() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getPlugins, false);

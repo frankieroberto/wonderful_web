@@ -13,3 +13,5 @@ function getVibration() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getVibration, false);

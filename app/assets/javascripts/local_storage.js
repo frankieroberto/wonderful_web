@@ -14,3 +14,5 @@ function getLocalStorage() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getLocalStorage, false);

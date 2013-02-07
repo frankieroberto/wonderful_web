@@ -14,3 +14,5 @@ function getScreenSize() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getScreenSize, false);

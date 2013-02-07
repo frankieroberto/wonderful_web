@@ -38,3 +38,5 @@ function detectFileReaderAvailability() {
 
 
 }
+
+document.addEventListener("DOMContentLoaded", detectFileReaderAvailability, false);

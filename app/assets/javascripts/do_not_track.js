@@ -12,3 +12,5 @@ function getDoNotTrack() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getDoNotTrack, false);

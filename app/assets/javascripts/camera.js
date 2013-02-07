@@ -29,3 +29,5 @@ function detectCameraAvailability() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", detectCameraAvailability, false);

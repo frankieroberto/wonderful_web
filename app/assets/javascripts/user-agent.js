@@ -11,3 +11,5 @@ function getUserAgent() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getUserAgent, false);

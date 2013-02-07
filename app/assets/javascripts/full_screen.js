@@ -11,3 +11,5 @@ function getFullScreen() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getFullScreen, false);

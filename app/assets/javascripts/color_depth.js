@@ -13,3 +13,5 @@ function getColorDepth() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getColorDepth, false);

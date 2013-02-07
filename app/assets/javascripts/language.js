@@ -30,3 +30,4 @@ function getLanguage() {
   }
 
 }
+document.addEventListener("DOMContentLoaded", getLanguage, false);

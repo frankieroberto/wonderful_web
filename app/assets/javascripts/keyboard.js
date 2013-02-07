@@ -115,10 +115,7 @@ function showKeysPressed() {
   }
 }
 
-function getKeyboard() {
+document.addEventListener("DOMContentLoaded", showKeysPressed, false);
+window.onkeydown = keyDown;
+window.onkeyup = keyUp;
 
-  showKeysPressed();
-  window.onkeydown = keyDown;
-  window.onkeyup = keyUp;
-
-}

@@ -19,3 +19,5 @@ function getReferrer() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getReferrer, false);

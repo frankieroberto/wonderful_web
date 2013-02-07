@@ -23,3 +23,5 @@ function getCookies() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getCookies, false);

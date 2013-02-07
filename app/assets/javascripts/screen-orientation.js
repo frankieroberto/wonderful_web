@@ -9,21 +9,16 @@ function getScreenOrientation() {
     var screen_orientation = screen.mozOrientation;
   }
 
-  element.innerHTML = screen_orientation;
+  if (screen_orientation != undefined) {
+    console.log('test');
 
-}
-
-function detectScreenOrientationAvailability() {
-
-  var element = document.getElementById('orientation');
-
-  if (screen && (screen.orientation || screen.mozOrientation)) {
-
-    getScreenOrientation();
-
+    element.innerHTML = screen_orientation;
   } else {
-
-    markUnavailable(orientation);
+    markUnavailable(element);
   }
 
+
 }
+
+
+document.addEventListener("DOMContentLoaded", getScreenOrientation, false);

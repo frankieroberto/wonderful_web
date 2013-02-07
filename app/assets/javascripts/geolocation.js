@@ -59,3 +59,6 @@
     geolocation_status.innerHTML = message;
 
   }
+
+
+document.addEventListener("DOMContentLoaded", detectGeolocationAvailability, false);

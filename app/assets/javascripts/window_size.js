@@ -13,6 +13,7 @@ function getWindowSize() {
     markUnavailable(element);
   }
 
-  window.onresize = getWindowSize;
-
 }
+
+document.addEventListener("DOMContentLoaded", getWindowSize, false);
+window.onresize = getWindowSize;

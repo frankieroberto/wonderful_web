@@ -1,24 +1,18 @@
-
-
-function detectNetworkStatusAvailability() {
-
-  var element = document.getElementById('network-status');
-
-  if (navigator.onLine != undefined) {
-    getNetworkStatus();
-  } else {
-    markUnavailable(element);
-  }
-
-}
-
 function getNetworkStatus() {
 
   var element = document.getElementById('network-status');
 
-  if (navigator.onLine) {
-    element.innerHTML = 'Online';
+  if (navigator.onLine != undefined) {
+    if (navigator.onLine) {
+      element.innerHTML = 'Online';
+    } else {
+      element.innerHTML = 'Offline';
+    }
   } else {
-    element.innerHTML = 'Offline';
+    markUnavailable(element);
   }
 }
+
+document.addEventListener("DOMContentLoaded", getNetworkStatus, false);
+window.addEventListener("online", getNetworkStatus, false);
+window.addEventListener("offline", getNetworkStatus, false);

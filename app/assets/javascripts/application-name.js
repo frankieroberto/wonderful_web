@@ -12,3 +12,5 @@ function detectApplicationName() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", detectApplicationName, false);

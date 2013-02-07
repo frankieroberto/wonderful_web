@@ -12,3 +12,5 @@ function detectApplicationVersion() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", detectApplicationVersion, false);

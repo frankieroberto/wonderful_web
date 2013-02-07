@@ -13,3 +13,5 @@ function getSessionStorage() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getSessionStorage, false);

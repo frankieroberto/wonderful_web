@@ -11,3 +11,5 @@ function getPlatform() {
   }
 
 }
+
+document.addEventListener("DOMContentLoaded", getPlatform, false);

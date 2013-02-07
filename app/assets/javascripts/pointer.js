@@ -5,7 +5,35 @@ mouse_click = '';
 
 
 function mouseDown(event) {
-  mouse_click = 'CLICK';
+
+  console.log(event);
+
+  if (event.ctrlKey) {
+    mouse_click += 'CONTROL '
+  }
+
+  if (event.altKey) {
+    mouse_click += 'ALT '
+  }
+
+  if (event.shiftKey) {
+    mouse_click += 'SHIFT '
+  }
+
+  if (event.metaKey) {
+    mouse_click += 'META '
+  }
+
+  if (event.button != undefined) {
+    if (event.button == 0) {
+      mouse_click += 'LEFT ';
+    } else if (event.button === 1) {
+      mouse_click += 'RIGHT ';
+    } else {
+      mouse_click += '(UNKNOWN BUTTON) ';
+    }
+  }
+  mouse_click += 'CLICK';
   showPointer();
 }
 
@@ -26,11 +54,7 @@ function showPointer() {
   element.innerHTML = 'X: ' + mouse_x + ' Y: ' + mouse_y + ' ' + mouse_click;
 }
 
-function getPointer() {
-
-  showPointer();
-  window.onmousedown = mouseDown;
-  window.onmouseup = mouseUp;
-  window.onmousemove = mouseMove;
-
-}
+document.addEventListener("DOMContentLoaded", showPointer, false);
+window.onmousedown = mouseDown;
+window.onmouseup = mouseUp;
+window.onmousemove = mouseMove;

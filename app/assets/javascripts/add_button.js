@@ -12,7 +12,7 @@ function addButton(location, text, callback) {
 }
 
 function markUnavailable(element) {
-  if (element && element.innerHTML && element.setAttribute) {
+  if (element && element.innerHTML !== undefined && element.setAttribute !== undefined) {
     element.innerHTML = 'Unavailable';
     element.setAttribute('class', 'unavailable');
   }
