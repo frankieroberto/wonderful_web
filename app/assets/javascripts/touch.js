@@ -1,16 +1,22 @@
 
-touch_data = '';
+touches = [];
+
 
 function touchMove(event) {
-}
-
-function touchStart(event) {
-  touch_data = 'TOUCHING';
+  touches = event.touches;
   getTouch();
 }
 
+function touchStart(event) {
+
+  touches = event.touches;
+  getTouch();
+
+}
+
 function touchEnd(event) {
-  touch_data = '';
+  touches = event.touches;
+
   getTouch();
 }
 
@@ -18,16 +24,26 @@ function touchEnd(event) {
 function getTouch() {
   var element = document.getElementById('touch');
 
-  if (touch_data === '') {
+  if (touches.length === 0) {
     element.setAttribute('class', 'blank');
     element.innerHTML = '(no touch)';
   } else {
+
+    var string = '';
+
+    for (var i = 0; i < touches.length; i++) {
+
+     string += 'TOUCH ' + touches[i].clientX + ' x ' + touches[i].clientY + ' ';
+    }
+
     element.setAttribute('class', '');
-    element.innerHTML = touch_data;
+    element.innerHTML = string;
   }
 
 }
 
 
 document.addEventListener("DOMContentLoaded", getTouch, false);
-window.ontouchmove = touchMove;
+document.addEventListener("touchstart", touchStart, false);
+document.addEventListener("touchend", touchEnd, false);
+document.addEventListener("touchmove", touchMove, false);
