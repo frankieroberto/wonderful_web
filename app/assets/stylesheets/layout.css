@@ -1,11 +1,15 @@
-
+body {
+  padding: 0; margin: 0;
+}
 article {
   max-width: 40em; margin: 0 auto;
+  padding: 0;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+
 }
 
 tr {
@@ -72,3 +76,5 @@ td ul {
 td li {
   padding: 0;
 }
+
+input[type=file] {max-width: 100%;}

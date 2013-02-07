@@ -16,4 +16,4 @@ function getWindowSize() {
 }
 
 document.addEventListener("DOMContentLoaded", getWindowSize, false);
-window.onresize = getWindowSize;
+window.addEventListener("resize", getWindowSize, false);

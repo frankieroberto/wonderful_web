@@ -43,15 +43,21 @@ function mouseUp(event) {
 }
 
 function mouseMove(event) {
-  mouse_x = event.clientX;
-  mouse_y = event.clientY;
+  mouse_x = event.screenX;
+  mouse_y = event.screenY;
   showPointer();
 }
 
 function showPointer() {
   var element = document.getElementById('pointer');
 
-  element.innerHTML = 'X: ' + mouse_x + ' Y: ' + mouse_y + ' ' + mouse_click;
+  if (mouse_x && mouse_y) {
+    element.innerHTML = 'X: ' + mouse_x + ' Y: ' + mouse_y + ' ' + mouse_click;
+    element.setAttribute('class', '');
+  } else {
+    element.innerHTML = '(no pointer)';
+    element.setAttribute('class', 'blank');
+  }
 }
 
 document.addEventListener("DOMContentLoaded", showPointer, false);
