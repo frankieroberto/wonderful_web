@@ -3,7 +3,7 @@ body {
 }
 article {
   max-width: 40em; margin: 0 auto;
-  padding: 0;
+  padding: 1em 5px;
 }
 
 table {
@@ -77,4 +77,4 @@ td li {
   padding: 0;
 }
 
-input[type=file] {max-width: 100%;}
+input[type=file] {max-width: 10em;}
