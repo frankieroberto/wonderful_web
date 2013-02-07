@@ -3,15 +3,15 @@ function getScreenOrientation() {
 
   var element = document.getElementById('orientation');
 
-  if (screen.orientation) {
+  if (window.orientation != undefined) {
+    var screen_orientation = window.orientation;
+  } else if (screen.orientation != undefined) {
     var screen_orientation = screen.orientation;
-  } else if (screen.mozOrientation) {
+  } else if (screen.mozOrientation != undefined) {
     var screen_orientation = screen.mozOrientation;
   }
 
   if (screen_orientation != undefined) {
-    console.log('test');
-
     element.innerHTML = screen_orientation;
   } else {
     markUnavailable(element);
@@ -22,3 +22,4 @@ function getScreenOrientation() {
 
 
 document.addEventListener("DOMContentLoaded", getScreenOrientation, false);
+window.addEventListener("orientationchange", getScreenOrientation, false);
