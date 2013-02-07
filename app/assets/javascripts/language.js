@@ -17,8 +17,10 @@ function getLanguage() {
 
     var string = '';
 
-    if (languages[language_code]) {
-      string = languages[language_code] + ' (' + language_code + ')';
+    var language_name = languages[language_code.toLowerCase()];
+
+    if (language_name) {
+      string = language_name + ' (' + language_code + ')';
     } else {
       string = language_code;
     }

@@ -63,3 +63,12 @@ details[open] summary:after {
   content: none;
 }
 
+td ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+td li {
+  padding: 0;
+}

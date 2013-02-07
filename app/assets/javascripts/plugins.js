@@ -15,25 +15,15 @@ function getPlugins() {
 
     } else {
 
-      var table = document.createElement('table');
-
+      var list = document.createElement('ul');
 
       for (var i = 0; i < plugins.length; i++) {
-
-        var tr = document.createElement('tr');
-
-        var th = document.createElement('th');
-        th.innerHTML = plugins[i].name
-        var td = document.createElement('td');
-        td.innerHTML = plugins[i].description
-
-        tr.appendChild(th);
-//        tr.appendChild(td);
-        table.appendChild(tr);
-
+        var list_item = document.createElement('li');
+        list_item.innerHTML = plugins[i].name
+        list.appendChild(list_item);
       }
 
-      element.appendChild(table);
+      element.appendChild(list);
 
     }
 
