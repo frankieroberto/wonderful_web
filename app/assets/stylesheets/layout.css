@@ -1,0 +1,65 @@
+
+article {
+  max-width: 40em; margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid #666;
+}
+
+table table tr {
+  border : 0;
+}
+
+th {
+  width: 30%;
+}
+
+td {
+  width: 70%;
+}
+
+th, td {
+  padding: 1em 1em 1em 0; margin: 0;
+  vertical-align: top;
+}
+
+article section {
+  margin-bottom: 2em;
+}
+
+article section h2 {
+  margin-bottom: 1em;
+}
+
+table table td,
+table table th {
+  padding: 0 1em 1em 0;
+}
+
+hgroup h1 {
+  margin: 0 0 .3em 0;
+}
+
+hgroup h2 {
+  margin: 0 0 .5em 0 ;
+}
+
+hgroup {
+  margin-bottom: 1em;
+}
+
+details summary {
+  outline-style: none;
+}
+
+details[open] .info,
+details[open] summary:after {
+  content: none;
+}
+

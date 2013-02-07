@@ -1,0 +1,10 @@
+# Files that Git should ignore.
+
+# Bundler config
+/.bundle
+
+# Temp files
+/tmp
+
+# Environment variables
+.env
