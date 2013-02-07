@@ -12,8 +12,10 @@ function addButton(location, text, callback) {
 }
 
 function markUnavailable(element) {
-  element.innerHTML = 'Unavailable';
-  element.setAttribute('class', 'unavailable');
+  if (element && element.innerHTML && element.setAttribute) {
+    element.innerHTML = 'Unavailable';
+    element.setAttribute('class', 'unavailable');
+  }
 }
 
 function markBlank(element) {
