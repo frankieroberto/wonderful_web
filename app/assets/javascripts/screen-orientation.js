@@ -1,7 +1,7 @@
 
 function getScreenOrientation() {
 
-  var element = document.getElementById('orientation');
+  var element = document.getElementById('screen-orientation');
 
   if (window.orientation != undefined) {
     var screen_orientation = window.orientation;
