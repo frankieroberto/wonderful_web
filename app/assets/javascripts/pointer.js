@@ -6,8 +6,6 @@ mouse_click = '';
 
 function mouseDown(event) {
 
-  console.log(event);
-
   if (event.ctrlKey) {
     mouse_click += 'CONTROL '
   }
