@@ -27,3 +27,9 @@ function markNoKeysPressed(element) {
   element.innerHTML = '(no keys pressed)';
   element.setAttribute('class', 'blank');
 }
+
+function blurIfEntered(event) {
+  if (event.charCode === 13) {
+    event.target.blur();
+  }
+}
