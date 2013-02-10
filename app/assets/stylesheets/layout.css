@@ -67,6 +67,10 @@ details[open] summary:after {
   content: none;
 }
 
+details[closed] p {
+  display: none;
+}
+
 td ul {
   list-style-type: none;
   padding: 0;

@@ -6,7 +6,15 @@ function getDoNotTrack() {
 
   var value = navigator.doNotTrack
   if (value != undefined) {
-    element.innerHTML = value;
+
+    if (value === 'yes' || value === '1') {
+      element.innerHTML = 'Do Not Track';
+    } else if (value == 'no' || value === '0') {
+      element.innerHTML = 'Tracking OK';
+    } else {
+      element.innerHTML = '(not specified)';
+    }
+
   } else {
     markUnavailable(element);
   }
