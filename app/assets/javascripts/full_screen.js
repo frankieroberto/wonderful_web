@@ -1,3 +1,16 @@
+
+function goFullScreen() {
+
+  if (document.body.requestFullScreen) {
+    document.body.requestFullScreen();
+  } else if (document.body.webkitRequestFullScreen) {
+    document.body.webkitRequestFullScreen();
+  } else if (document.body.mozRequestFullScreen) {
+    document.body.mozRequestFullScreen();
+  }
+
+}
+
 function getFullScreen() {
 
   var element = document.getElementById('full-screen');
@@ -13,11 +26,20 @@ function getFullScreen() {
     var string = '';
 
     if (full_screen) {
-      string = 'Full Screen';
+      element.innerHTML = 'Full Screen';
+
     } else {
-      string = 'Not Full Screen'
+      element.innerHTML = 'Not Full Screen ';
+
+      if (document.body.requestFullScreen || document.body.webkitRequestFullScreen || document.body.mozRequestFullScreen) {
+        var button = document.createElement('button');
+        button.innerHTML = 'Go Full Screen';
+        button.addEventListener('click', goFullScreen, false);
+        element.appendChild(button);
+      }
+
+
     }
-    element.innerHTML = string;
   } else {
     markUnavailable(element);
   }
