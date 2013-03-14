@@ -3,7 +3,6 @@ mouse_x = null;
 mouse_y = null;
 mouse_click = '';
 
-
 function mouseDown(event) {
 
   if (event.ctrlKey) {
@@ -58,7 +57,7 @@ function showPointer() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", showPointer, false);
+document.addEventListener("DOMContentLoaded", mouseMove, false);
 window.onmousedown = mouseDown;
 window.onmouseup = mouseUp;
 window.onmousemove = mouseMove;

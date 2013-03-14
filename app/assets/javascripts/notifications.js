@@ -1,15 +1,11 @@
 
 function requestNotificationPermission() {
 
-  if (window.webkitNotifications != undefined) {
-    window.webkitNotifications.requestPermission(function() {
+	if (Notification.requestPermission != undefined) {
+		Notification.requestPermission(function() {
       getNotifications();
     });
-  } else {
-    Notification.requestPermission(function() {
-      getNotifications();
-    });
-  }
+	} 
 }
 
 function notificationShown() {
@@ -81,7 +77,7 @@ function checkNotifications() {
 
     if (Notification.permissionLevel != undefined) {
 
-      var permission_level = Notification.permissionLevel()
+      var permission_level = Notification.permissionLevel()      
 
       if (permission_level == 'granted') {
         addNotifyButton()
@@ -91,23 +87,7 @@ function checkNotifications() {
         addRequestPermissionButton();
       }
 
-    } else if (window.webkitNotifications != undefined && window.webkitNotifications.checkPermission != undefined) {
-
-      console.log('webkit permissions');
-      var webkit_notification_permission = window.webkitNotifications.checkPermission();
-
-      if (webkit_notification_permission === 0) {
-        addNotifyButton()
-      } else if (webkit_notification_permission === 2) {
-        showPermissionDenied();
-      } else {
-        addRequestPermissionButton();
-      }
-
-    } else {
-      markUnavailable(element);
-    }
-
+    } 
   } else {
     markUnavailable(element);
   }

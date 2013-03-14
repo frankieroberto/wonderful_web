@@ -4,7 +4,7 @@ function addCookieInput(event) {
   var element = event.target
   element.removeEventListener('click', addCookieInput);
 
-  element.innerHTML = '';
+  element.textContent = '';
 
   var previous_value = unescape(document.cookie.replace(new RegExp("(?:^|.*;\\s*)" + escape('test').replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*((?:[^;](?!;))*[^;]?).*"), "$1"));
 
@@ -48,17 +48,17 @@ function getCookies() {
 
       if (cookie_text && cookie_text != '') {
 
-        element.innerHTML = cookie_text;
+        element.textContent = cookie_text;
         element.removeAttribute('class');
       } else {
-        element.innerHTML = '(empty)'
+        element.textContent = '(empty)'
         element.setAttribute('class','empty');
       }
       element.addEventListener('click', addCookieInput, false);
 
 
     } else {
-      element.innerHTML = 'Disabled';
+      element.textContent = 'Disabled';
 
     }
 
