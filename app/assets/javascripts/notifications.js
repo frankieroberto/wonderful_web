@@ -73,21 +73,18 @@ function checkNotifications() {
 
   var element = document.getElementById('web-notifications');
 
-  if (window.Notification != undefined) {
+  if (window.Notification != undefined && Notification.permissionLevel != undefined) {
 
-    if (Notification.permissionLevel != undefined) {
+		var permission_level = Notification.permissionLevel()      
 
-      var permission_level = Notification.permissionLevel()      
+		if (permission_level == 'granted') {
+			addNotifyButton()
+		} else if (permission_level == 'denied') {
+			showPermissionDenied();
+		} else {
+			addRequestPermissionButton();
+		}
 
-      if (permission_level == 'granted') {
-        addNotifyButton()
-      } else if (permission_level == 'denied') {
-        showPermissionDenied();
-      } else {
-        addRequestPermissionButton();
-      }
-
-    } 
   } else {
     markUnavailable(element);
   }
