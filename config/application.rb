@@ -11,9 +11,10 @@ module WonderfulWeb
   class Application < Rails::Application
 
     config.session_store :disabled
-    config.whiny_nils = true
     config.encoding = "utf-8"
     config.logger = Logger.new(STDOUT)
+
+    config.secret_key_base = ENV['SECRET_KEY_BASE']
 
     config.active_support.escape_html_entities_in_json = true
     config.active_support.deprecation = :log

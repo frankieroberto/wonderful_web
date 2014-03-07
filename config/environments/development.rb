@@ -5,4 +5,6 @@ WonderfulWeb::Application.configure do
 
   config.action_controller.perform_caching = false
 
+  config.eager_load = false
+
 end
