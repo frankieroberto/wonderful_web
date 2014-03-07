@@ -1,8 +1,17 @@
 
 
 codes = {
+8 : 'BACKSPACE',
+9 : 'TAB',
+13 : 'RETURN',
 16 : 'SHIFT',
+17 : 'CONTROL',
+18 : 'ALT',
 27 : 'ESC',
+37 : 'LEFT',
+38 : 'UP',
+39 : 'RIGHT',
+40 : 'DOWN',
 65 : 'A',
 66 : 'B',
 67 : 'C',
@@ -70,7 +79,18 @@ codes = {
 124 : 'F13',
 125 : 'F14',
 126 : 'F15',
-127 : 'F16'
+127 : 'F16',
+186 : 'SEMI COLON',
+187 : 'EQUALS',
+188 : 'COMMA',
+189 : 'HYPHEN',
+190 : 'FULL STOP',
+191 : 'FORWARD SLASH',
+219 : 'LEFT BRACKET',
+220 : 'BACKSLASH',
+221 : 'RIGHT BRACKET',
+222 : 'APOSTROPHE'
+
 }
 
 keys_pressed = [];
