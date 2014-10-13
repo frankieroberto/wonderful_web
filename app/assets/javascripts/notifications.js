@@ -28,7 +28,7 @@ function notificationError() {
 
 function sendNotification() {
 
-  var notification = new Notification('Notified',
+  var notification = new Notification('Notification',
     {
       body: 'This is a notification',
       tag: 'test',
@@ -73,9 +73,9 @@ function checkNotifications() {
 
   var element = document.getElementById('web-notifications');
 
-  if (window.Notification != undefined && Notification.permissionLevel != undefined) {
+  if (window.Notification != undefined && window.Notification.permission != undefined) {
 
-		var permission_level = Notification.permissionLevel()      
+		var permission_level = window.Notification.permission     
 
 		if (permission_level == 'granted') {
 			addNotifyButton()
