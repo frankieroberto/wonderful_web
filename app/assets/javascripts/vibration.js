@@ -7,7 +7,6 @@ function vibrate() {
 
   window.setTimeout(function() {
     button.innerText = 'Vibrate';
-    console.log(button)
   }, 1000)
 
   navigator.vibrate(1000)
