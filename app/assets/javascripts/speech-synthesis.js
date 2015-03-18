@@ -34,15 +34,6 @@ function checkSpeechSynthesis() {
     markUnavailable(element);
   }
 
-
-  var speech_synthesis = window.screen.colorDepth;
-
-  if (color_depth != undefined) {
-    element.innerHTML = color_depth + ' bits';
-  } else {
-    markUnavailable(element);
-  }
-
 }
 
 document.addEventListener("DOMContentLoaded", checkSpeechSynthesis, false);
