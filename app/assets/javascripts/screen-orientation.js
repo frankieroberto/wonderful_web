@@ -3,16 +3,10 @@ function getScreenOrientation() {
 
   var element = document.getElementById('screen-orientation');
 
-  if (window.orientation != undefined) {
-    var screen_orientation = window.orientation;
-  } else if (screen.orientation != undefined) {
-    var screen_orientation = screen.orientation;
-  } else if (screen.mozOrientation != undefined) {
-    var screen_orientation = screen.mozOrientation;
-  }
+  if (window.screen.orientation != undefined && window.screen.orientation.type != undefined &&
+    window.screen.orientation.angle != undefined) {
 
-  if (screen_orientation != undefined) {
-    element.innerHTML = screen_orientation;
+    element.innerHTML = window.screen.orientation.type + ' (' + window.screen.orientation.angle + '°)';
   } else {
     markUnavailable(element);
   }
