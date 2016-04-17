@@ -56,8 +56,7 @@ GEM
     multi_json (1.11.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    puma (2.11.0)
-      rack (>= 1.1, < 2.0)
+    puma (3.4.0)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -113,7 +112,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  puma
+  puma (~> 3.4)
   rails (~> 4.2.0)
   rails_12factor
   uglifier
+
+BUNDLED WITH
+   1.11.2
