@@ -1,8 +1,7 @@
-function handleDeviceOrientation(event) {
+function handleAbsoluteDeviceOrientation(event) {
 
-  var element = document.getElementById('device-orientation');
 
-  console.log(event)
+  var element = document.getElementById('absolute-device-orientation');
 
   if (event.alpha != undefined && event.beta  != undefined && event.gamma != undefined) {
 
@@ -14,16 +13,16 @@ function handleDeviceOrientation(event) {
 
   } else {
 
-    markDeviceOrientationUnavailable();
+    markAbsoluteDeviceOrientationUnavailable();
   }
 
 
 }
 
-function markDeviceOrientationUnavailable() {
-  var element = document.getElementById('device-orientation');
+function markAbsoluteDeviceOrientationUnavailable() {
+  var element = document.getElementById('absolute-device-orientation');
   markUnavailable(element);
 }
 
 
-window.addEventListener("deviceorientation", handleDeviceOrientation);
+window.addEventListener("deviceorientationabsolute", handleAbsoluteDeviceOrientation);
