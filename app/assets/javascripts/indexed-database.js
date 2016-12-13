@@ -32,14 +32,14 @@ function databaseOpened(event) {
   button.addEventListener('click', function() { addDatabaseRow(db) });
 
   db_cursor.onsuccess = function(event) {
-    
+
     var cursor = event.target.result;
     if (cursor) {
 
       var tbody = document.getElementById('db-table-body');
       var row = document.createElement('tr');
       row.innerHTML = '<td>' + cursor.key + '</td><td>' + cursor.value + '</tr><tr><button data-key="' + cursor.key + '">Delete</button></tr>';
-      
+
       row.getElementsByTagName('button')[0].addEventListener('click', deleteRow);
 
       tbody.appendChild(row);
@@ -76,7 +76,7 @@ function deleteRow(event) {
 function addDatabaseRow(db) {
 
   var object_store = db.transaction(["examples"], 'readwrite').objectStore("examples");
-  
+
   object_store.add('');
 
 }
