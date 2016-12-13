@@ -53,7 +53,6 @@ function databaseOpened(event) {
     }
   };
 
-  console.log(event.target);
 }
 
 function databaseOpenFailed(event) {
