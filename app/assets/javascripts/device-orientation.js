@@ -2,8 +2,6 @@ function handleDeviceOrientation(event) {
 
   var element = document.getElementById('device-orientation');
 
-  console.log(event)
-
   if (event.alpha != undefined && event.beta  != undefined && event.gamma != undefined) {
 
     var alpha = Math.round(event.alpha);
