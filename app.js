@@ -1,0 +1,104 @@
+import { getJavascriptEnabled } from './javascripts/javascript.js';
+import { setupDeviceOrientation, handleDeviceOrientation } from './javascripts/device-orientation.js';
+import { handleAbsoluteDeviceOrientation } from './javascripts/absolute_device_orientation.js';
+import { detectApplicationName } from './javascripts/application-name.js';
+import { detectApplicationVersion } from './javascripts/application-version.js';
+import { getWindowSize } from './javascripts/window_size.js';
+import { getUserAgent } from './javascripts/user-agent.js';
+import { getPlatform } from './javascripts/platform.js';
+import { getBatteryStatus } from './javascripts/battery-status.js';
+import { getNetworkStatus } from './javascripts/network-status.js';
+import { showKeysPressed, keyDown, keyUp } from './javascripts/keyboard.js';
+import { mouseDown, mouseUp, mouseMove } from './javascripts/pointer.js';
+import { getTouch, touchStart, touchEnd, touchMove } from './javascripts/touch.js';
+import { updateScrollPosition } from './javascripts/scroll-position.js';
+import { checkGamepads } from './javascripts/gamepad.js';
+import { getLanguage } from './javascripts/language.js';
+import { getPlugins } from './javascripts/plugins.js';
+import { getJavaEnabled } from './javascripts/java.js';
+import { setupAmbientLight } from './javascripts/ambient-light.js';
+import { getVibration } from './javascripts/vibration.js';
+import { detectCameraAvailability } from './javascripts/camera.js';
+import { detectGeolocationAvailability } from './javascripts/geolocation.js';
+import { getNetworkInformation } from './javascripts/network-information.js';
+import { getScreenSize } from './javascripts/screen-size.js';
+import { getScreenOrientation } from './javascripts/screen-orientation.js';
+import { getColorDepth } from './javascripts/color_depth.js';
+import { getFullScreen } from './javascripts/full_screen.js';
+import { forceChanged } from './javascripts/force_touch.js';
+import { getDoNotTrack } from './javascripts/do_not_track.js';
+import { checkNotifications } from './javascripts/notifications.js';
+import { checkClipboard } from './javascripts/clipboard.js';
+import { getCookies } from './javascripts/cookies.js';
+import { getLocalStorage } from './javascripts/local_storage.js';
+import { getSessionStorage } from './javascripts/session_storage.js';
+import { initializeIndexedDatabase } from './javascripts/indexed-database.js';
+import { checkSpeechSynthesis } from './javascripts/speech-synthesis.js';
+import { getReferrer } from './javascripts/referrer.js';
+import { detectFileReaderAvailability } from './javascripts/file-reader.js';
+import { getMimeTypes } from './javascripts/mime-types.js';
+
+document.addEventListener("DOMContentLoaded", getJavascriptEnabled, false);
+document.addEventListener("DOMContentLoaded", detectApplicationName, false);
+document.addEventListener("DOMContentLoaded", detectApplicationVersion, false);
+document.addEventListener("DOMContentLoaded", getWindowSize, false);
+document.addEventListener("DOMContentLoaded", getUserAgent, false);
+document.addEventListener("DOMContentLoaded", getPlatform, false);
+document.addEventListener("DOMContentLoaded", getBatteryStatus, false);
+document.addEventListener("DOMContentLoaded", getNetworkStatus, false);
+document.addEventListener("DOMContentLoaded", showKeysPressed, false);
+document.addEventListener("DOMContentLoaded", mouseMove, false);
+document.addEventListener("DOMContentLoaded", getTouch, false);
+document.addEventListener("touchstart", touchStart, false);
+document.addEventListener("touchend", touchEnd, false);
+document.addEventListener("touchmove", touchMove, false);
+document.addEventListener("DOMContentLoaded", updateScrollPosition, false);
+document.addEventListener("scroll", updateScrollPosition, false);
+document.addEventListener("DOMContentLoaded", checkGamepads, false);
+document.addEventListener("DOMContentLoaded", getLanguage, false);
+document.addEventListener("DOMContentLoaded", getPlugins, false);
+document.addEventListener("DOMContentLoaded", getJavaEnabled, false);
+document.addEventListener("DOMContentLoaded", setupAmbientLight, false);
+document.addEventListener("DOMContentLoaded", getVibration, false);
+document.addEventListener("DOMContentLoaded", detectCameraAvailability, false);
+document.addEventListener("DOMContentLoaded", detectGeolocationAvailability, false);
+document.addEventListener("DOMContentLoaded", getNetworkInformation, false);
+document.addEventListener("DOMContentLoaded", getScreenSize, false);
+document.addEventListener("DOMContentLoaded", getScreenOrientation, false);
+document.addEventListener("DOMContentLoaded", getColorDepth, false);
+document.addEventListener("DOMContentLoaded", getFullScreen, false);
+document.addEventListener("DOMContentLoaded", getDoNotTrack, false);
+document.addEventListener("webkitmouseforcechanged", forceChanged, false);
+document.addEventListener("DOMContentLoaded", checkNotifications, false);
+document.addEventListener("DOMContentLoaded", checkClipboard, false);
+document.addEventListener("DOMContentLoaded", getCookies, false);
+document.addEventListener("DOMContentLoaded", getLocalStorage, false);
+document.addEventListener("DOMContentLoaded", getSessionStorage, false);
+document.addEventListener("DOMContentLoaded", initializeIndexedDatabase, false);
+document.addEventListener("DOMContentLoaded", checkSpeechSynthesis, false);
+document.addEventListener("DOMContentLoaded", getReferrer, false);
+document.addEventListener("DOMContentLoaded", detectFileReaderAvailability, false);
+document.addEventListener("DOMContentLoaded", getMimeTypes, false);
+document.addEventListener("DOMContentLoaded", setupDeviceOrientation, false);
+
+
+window.addEventListener("resize", getFullScreen, false);
+document.addEventListener("webkitfullscreenchange", getFullScreen, false);
+
+if (navigator.connection != undefined && navigator.connection.ontypechange != undefined) {
+  navigator.connection.addEventListener('typechange', getNetworkInformation);
+}
+
+
+window.onkeydown = keyDown;
+window.onkeyup = keyUp;
+window.onmousedown = mouseDown;
+window.onmouseup = mouseUp;
+window.onmousemove = mouseMove;
+
+window.addEventListener("deviceorientationabsolute", handleAbsoluteDeviceOrientation);
+window.addEventListener("resize", getWindowSize, false);
+window.addEventListener("online", getNetworkStatus, false);
+window.addEventListener("offline", getNetworkStatus, false);
+window.addEventListener("orientationchange", getScreenOrientation, false);
+window.addEventListener("deviceorientation", handleDeviceOrientation);
