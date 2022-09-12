@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WonderfulWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" media="all" href="stylesheet.css" />
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+    <article id="article">
+     <header>
+       <hgroup>
+         <h1>Wonderful Web</h1>
+         <h2>An exploration of web APIs</h2>
+        </hgroup>
+      </header>
+
+      <section>
+        <h2>Input</h2>
+
+        <table>
+          <tr>
+            <th><details><summary>Keyboard</summary>
+              <p>Typically used for typing.</p>
+              </details>
+              </th>
+            <td id="keyboard"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Pointer</summary>
+                <p>The on-screen cursor, usually controlled by a mouse, trackpad or rollerball.</p>
+              </details>
+            </th>
+            <td id="pointer"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Touch</summary>
+                <p>Interactions on touch-screens.</p>
+              </details>
+            </th>
+            <td id="touch"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Force Touch</summary>
+                <p>Interactions on a pressure-sensitive touchscrren.</p>
+              </details>
+            </th>
+            <td id="force-touch"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Scroll position</summary>
+                <p>The scroll position of the page, relative to the viewport</p>
+              </details>
+            </th>
+            <td id="scroll-position"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Gamepads</summary>
+                <p>Specialised ergonimic controllers usually used for games.</p>
+              </details>
+            </th>
+            <td id="gamepads"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Device orientation</summary>
+                <p>The relative direction of your device in three dimensions</p>
+              </details>
+            </th>
+            <td id="device-orientation"></td>
+          </tr>
+
+
+          <tr>
+            <th>
+              <details>
+                <summary>Absolute Device orientation</summary>
+                <p>The direction of your device in relation to the compass</p>
+              </details>
+            </th>
+            <td id="absolute-device-orientation"></td>
+          </tr>
+
+
+        </table>
+
+      </section>
+
+      <section>
+        <h2>Preferences</h2>
+
+        <table>
+          <tr>
+            <th>
+              <details>
+                <summary>Language</summary>
+                <p>This is your preferred language. Webpages can use this to offer translations.</p>
+              </details>
+            </th>
+            <td id="language"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Tracking</summary>
+                <p>A setting you can use to tell websites whether they can track you for marketing purposes.</p>
+              </details>
+            </th>
+            <td id="do-not-track"></td>
+          </tr>
+
+        </table>
+      </section>
+
+      <section>
+        <h2>Communication</h2>
+
+        <table>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Notifications</summary>
+                <p>A feature through which webpages currently open can alert you to some activity.</p>
+              </details>
+            </th>
+            <td id="web-notifications"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Clipboard</summary>
+                <p>A simple way to copy and paste information between applications.</p>
+              </details>
+            </th>
+            <td id="clipboard"></td>
+          </tr>
+
+        </table>
+      </section>
+
+      <section>
+        <h2>Storage</h2>
+
+        <table>
+
+          <tr>
+            <th><details><summary>Cookies</summary>
+              <p>A storage area for small bits of data, which are then included in the request for the page.</p>
+              </details></th>
+            <td id="cookies"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Local Storage</summary>
+                <p>A storage area for small bits of data, which will last forever unless the user deleted them.</p>
+              </details>
+            </th>
+            <td id="local-storage"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Session Storage</summary>
+                <p>A temporary storage for data which is emptied whenever you close the webpage window.</p>
+                </details>
+              </th>
+            <td id="session-storage"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Indexed database</summary>
+                <p>A mechanism for storing more complex hierarchical data types.</p>
+                </details>
+              </th>
+            <td id="indexed-database"></td>
+          </tr>
+
+
+        </table>
+      </section>
+
+      <section>
+        <h2>Display</h2>
+
+        <table>
+          <tr>
+            <th>
+              <details>
+                <summary>Screen Orientation</summary>
+                <p>Reveals the screen orientation type and angle.</p>
+              </details>
+            </th>
+            <td id="screen-orientation"></td>
+          </tr>
+
+          <tr>
+            <th>Window Size</th>
+            <td id="window-size"></td>
+          </tr>
+
+          <tr>
+            <th>Screen Size</th>
+            <td id="screen-size"></td>
+          </tr>
+
+          <tr>
+            <th>Color Depth</th>
+            <td id="color-depth"></td>
+          </tr>
+
+          <tr>
+            <th>Full Screen</th>
+            <td id="full-screen"></td>
+          </tr>
+        </table>
+
+      </section>
+
+      <section>
+        <h2>Audio &amp; Video</h2>
+
+        <table>
+          <tr>
+            <th>Speech Synthesis</th>
+            <td id="speech-synthesis"></td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+
+        <h2>Status</h2>
+
+        <table>
+          <tr>
+            <th>Geolocation</th>
+            <td id="geolocation-data"></td>
+          </tr>
+
+          <tr>
+            <th>Camera</th>
+            <td id="camera-data"></td>
+          </tr>
+
+          <tr>
+            <th>Vibration</th>
+            <td id="vibration"></td>
+          </tr>
+
+          <tr>
+            <th>Battery Status</th>
+            <td id="battery-status"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Ambient light level</summary>
+                <p>Returns data from a light sensor.</p>
+              </details>
+            </th>
+            <td id="ambient-light"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Network Status</summary>
+                <p>Reveals whether the device is online or offline<p>
+              </details>
+            </th>
+            <td id="network-status"></td>
+          </tr>
+
+          <tr>
+            <th>
+              <details>
+                <summary>Network Information</summary>
+                <p>Reveals the type of the current connection (eg <code>cellular</code> or <code>wifi</code>).</p>
+              </details>
+            </th>
+            <td id="network-information"></td>
+          </tr>
+
+          <tr>
+            <th>Platform</th>
+            <td id="platform"></td>
+          </tr>
+
+          <tr>
+            <th>Referrer</th>
+            <td id="referrer"></td>
+          </tr>
+
+          <tr>
+            <th>File Reader</th>
+            <td id="file-reader"></td>
+          </tr>
+
+        </table>
+      </section>
+
+      <section>
+        <h2>Software</h2>
+
+        <table>
+
+          <tr>
+            <th>Javascript</th>
+            <td id="javascript"><noscript>Unavailable</noscript></td>
+          </tr>
+
+          <tr>
+            <th>Java</th>
+            <td id="java"></td>
+          </tr>
+
+          <tr>
+            <th>Plugins</th>
+            <td id="plugins"></td>
+          </tr>
+
+          <tr>
+            <th>Content types</th>
+            <td id="mime-types"></td>
+          </tr>
+
+        </table>
+      </section>
+
+      <section>
+        <h2>Identity</h2>
+
+        <table>
+          <tr>
+            <th>Application Name</th>
+            <td id="application-name"></td>
+          </tr>
+
+          <tr>
+            <th>Version</th>
+            <td id="application-version"></td>
+          </tr>
+
+          <tr>
+            <th>User Agent</th>
+            <td id="user-agent"></td>
+          </tr>
+        </table>
+
+      </section>
+
+    </article>
+  </head>
+</html>

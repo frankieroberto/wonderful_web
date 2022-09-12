@@ -1,0 +1,57 @@
+body,
+details summary {
+  font-family: 'Robotico', 'DroidSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  vertical-align: middle;
+
+}
+
+hgroup {
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+hgroup h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+article section h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+th {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: top;
+}
+
+table table th {
+  font-weight: 200;
+}
+
+td {
+  font-weight: 200;
+}
+
+.info,
+details summary:after {
+  content: 'i';
+  margin-left: 1em;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Baskerville';
+}
+
+details {
+  font-size: 12px;
+  line-height: 14px ;
+  font-weight: 200;
+}
